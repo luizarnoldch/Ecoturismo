@@ -1,0 +1,127 @@
+*{
+    font-family: 'Nunito', sans-serif;
+    ::-webkit-scrollbar{
+        width: 5px;
+        height: 5px;
+        &-track{
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+$primary-color: #802121;
+$secondary-color: #195C2C;
+
+input::placeholder{
+    color: white;
+}
+
+.bg{
+    &-landing-eco{
+        background-image: url("/img/background_landing.png");
+        object-fit: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    &-dark-eco{
+        background-color: #4A4A4A;
+        color: white;
+    }
+    &-primary-eco{
+        background-color: $primary-color;
+        color: white;
+        &:hover{
+            color: white;
+        }
+    }
+    &-crema-eco{
+        background-color: #F8FFF6;
+    }
+}
+
+.color{
+    &-primary-eco{
+        &:hover{
+            color: $primary-color;
+        }
+        color: $primary-color;
+    }
+}
+
+a{
+    &:hover{
+        color: $primary-color;
+        text-decoration: underline!important;
+    }
+    color: $primary-color;
+    text-decoration: none;
+}
+
+.btn-flotante {
+    width: 125px; 
+    height: 125px;
+    text-decoration: none;
+    font-size: 12px; 
+    color: #ffffff;
+    letter-spacing: 2px; 
+    background-color: #284E16;
+    padding: 18px 30px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    transition: all 300ms ease 0ms;
+    z-index: 99;
+    &:hover {
+        background-color: #2c2fa5;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+        transform: translateY(-7px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-flotante {
+        width: auto;
+        height: auto;
+        font-size: 32px;
+        padding: 12px 20px;
+        bottom: 20px;
+        right: 20px;
+        p, span{
+            display: none;
+        }
+    }
+}
+
+.card{
+    &-eco{
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover
+        }
+        transition: all 300ms ease 0ms;
+        &:hover {
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-7px);
+        }
+    }
+}
+
+.btn{
+    &-primary-eco{
+        background-color: $primary-color;
+        border-radius: 20px;
+        color: white;
+        &:hover{
+            color: white;
+        }
+    }
+    &-secondary-eco{
+        background-color: $secondary-color;
+        border-radius: 20px;
+        color: white;
+        &:hover{
+            color: white;
+        }
+    }
+}
